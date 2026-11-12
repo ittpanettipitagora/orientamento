@@ -1,0 +1,135 @@
+/* @theme panetti */
+/*
+ * Tema Marp · Orientamento 2026/27 · Liceo Tecnologico Panetti Pitagora
+ * Formato 16:9 (1280 × 720). Classi: cover, section, indirizzo (+ chi cat eln elt inf), quadro, date, closing.
+ * Il mosaico animato lo aggiunge mosaico.js (serve Marp con HTML attivo).
+ */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --blu: #25377E;
+  --giallo: #EAE463;
+  --carta: #ECEDE6;
+  --bianco: #FFFFFF;
+  --chi: #EF7A30;
+  --cat: #5AA845;
+  --eln: #7A4EA3;
+  --elt: #D9362B;
+  --inf: #1FA9D9;
+  --accento: var(--blu);
+}
+
+section {
+  width: 1280px;
+  height: 720px;
+  box-sizing: border-box;
+  padding: 72px 88px 96px;
+  background: var(--carta);
+  color: var(--blu);
+  font-family: 'Barlow Semi Condensed', 'Arial Narrow', sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.32;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+/* il contenuto sta sopra il mosaico */
+section > *:not(.mosaico):not(footer):not(header) { position: relative; z-index: 2; }
+
+h1, h2, h3 { margin: 0 0 .35em; font-weight: 800; letter-spacing: -0.01em; line-height: 1.02; color: var(--blu); }
+h1 { font-size: 72px; }
+h2 { font-size: 54px; }
+h3 { font-size: 34px; font-weight: 700; }
+/* h5 = etichetta sopra il titolo (kicker) */
+h5 {
+  margin: 0 0 14px; font-size: 18px; font-weight: 700; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--accento); line-height: 1.35;
+}
+h6 { margin: 0 0 8px; font-size: 16px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--accento); }
+p { margin: 0 0 .7em; }
+strong { font-weight: 700; }
+a { color: inherit; }
+ul, ol { margin: 0 0 .7em; padding-left: 1.1em; }
+li { margin: .15em 0; }
+li::marker { color: var(--accento); }
+mark, em.hl { background: var(--giallo); color: var(--blu); font-style: normal; padding: 0 .12em; }
+blockquote { margin: 0; padding: 0 0 0 24px; border-left: 6px solid var(--giallo); font-weight: 500; font-size: 34px; line-height: 1.25; }
+img { max-width: 100%; }
+
+/* colonne: <div class="cols"> ... </div> */
+.cols { display: grid; grid-template-columns: repeat(var(--n, 3), 1fr); gap: 36px; border-top: 4px solid var(--accento); padding-top: 18px; }
+.cols > div > h6 { margin-bottom: 6px; }
+.cols p { font-size: 23px; line-height: 1.32; }
+
+/* fascia gialla in basso = footer di Marp */
+footer {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 52px; z-index: 3;
+  background: var(--giallo); color: var(--blu);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 20px; letter-spacing: .16em; text-transform: lowercase;
+}
+section::after { /* numero di pagina, dentro la fascia gialla */
+  position: absolute; right: 40px; bottom: 16px; z-index: 4; padding: 0; line-height: 20px;
+  font-weight: 700; font-size: 16px; letter-spacing: .14em; color: var(--accento);
+}
+section:not(:has(footer))::after { bottom: 24px; }
+
+/* tabelle: quadri orari */
+table { border-collapse: collapse; font-size: 22px; line-height: 1.2; width: 100%; }
+th { font-size: 15px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; text-align: left; padding: 0 12px 8px 0; border-bottom: 3px solid var(--blu); }
+td { padding: 7px 12px 7px 0; border-bottom: 1px solid rgba(37,55,126,.22); vertical-align: top; }
+th:not(:first-child), td:not(:first-child) { text-align: center; width: 64px; padding-right: 0; font-variant-numeric: tabular-nums; }
+tr:last-child td { font-weight: 700; border-top: 3px solid var(--accento); border-bottom: none; }
+table thead { background: none; }
+table tr { background: none !important; }
+
+/* ---------- colori indirizzo ---------- */
+section.chi { --accento: var(--chi); }
+section.cat { --accento: var(--cat); }
+section.eln { --accento: var(--eln); }
+section.elt { --accento: var(--elt); }
+section.inf { --accento: var(--inf); }
+
+/* ---------- mosaico (generato da mosaico.js) ---------- */
+.mosaico { position: absolute; z-index: 1; pointer-events: none; }
+.mosaico svg { display: block; width: 100%; height: 100%; overflow: visible; }
+
+/* spazio lasciato libero dal mosaico sui layout */
+section.cover { padding: 84px 680px 96px 88px; justify-content: center; }
+section.cover h1 { font-size: 92px; line-height: .98; margin-bottom: 30px; }
+section.cover h1 em { font-style: normal; background: var(--giallo); padding: 0 14px; margin-left: -14px; display: inline-block; }
+section.cover p { font-size: 30px; font-weight: 500; line-height: 1.25; }
+section.cover footer { right: 600px; }
+
+section.section { padding-right: 420px; justify-content: center; }
+section.section h1 { font-size: 88px; }
+section.section p { font-size: 32px; font-weight: 500; }
+
+section:not(.cover):not(.section):not(.closing) { padding-right: 88px; }
+section:not(.cover):not(.section):not(.closing) > h1:first-of-type,
+section:not(.cover):not(.section):not(.closing) > h2:first-of-type,
+section:not(.cover):not(.section):not(.closing) > h5:first-child { margin-right: 280px; }
+
+section.indirizzo h1 { font-size: 64px; }
+section.indirizzo > p { font-size: 26px; font-weight: 500; max-width: 1020px; }
+
+section.quadro table { font-size: 21px; }
+section.quadro .tabelle { display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: start; }
+section.quadro .tabelle h6 { margin-top: 0; }
+
+section.date .date-grid { display: grid; grid-template-columns: 1fr 1fr 1.1fr; gap: 40px; align-items: start; }
+section.date .tag { display: inline-block; background: var(--blu); color: #fff; font-weight: 700; font-size: 20px; letter-spacing: .1em; padding: 6px 14px 4px; }
+section.date .meta { font-weight: 500; font-size: 20px; margin: 10px 0 6px; }
+section.date .giorni { font-weight: 700; font-size: 32px; line-height: 1.32; }
+section.date .qr { display: flex; flex-direction: column; gap: 16px; }
+section.date .qr > div { display: flex; align-items: center; gap: 16px; padding: 12px; background: #fff; }
+section.date .qr > div.prenota { background: var(--blu); color: #fff; }
+section.date .qr img { width: 112px; height: 112px; background: #fff; padding: 8px; box-sizing: content-box; }
+section.date .qr b { font-weight: 800; font-size: 24px; line-height: 1.1; letter-spacing: .02em; }
+section.date .qr small { display: block; font-weight: 600; font-size: 18px; margin-top: 6px; }
+
+section.closing { padding: 0; justify-content: flex-end; }
+section.closing > h1, section.closing > p { display: none; } /* il titolo resta per l'indice, il mosaico occupa tutto */
