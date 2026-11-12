@@ -9,7 +9,6 @@ title: Orientamento 2026/27 · Liceo Tecnologico Panetti Pitagora
 <!-- _class: cover -->
 <!-- _paginate: false -->
 <script src="mosaico.js"></script>
-<script src="mappa.js"></script>
 
 # Entra. Scopri. <em>Realizza.</em>
 
@@ -34,6 +33,12 @@ Scegli subito l’indirizzo che ti appassiona e inizi a studiarne le materie gi�
 <div class="cols">
 <div>
 
+###### Laboratori obbligatori
+Il laboratorio fa parte dell’orario di tutti: da 5 ore a settimana in prima fino a 9 in quarta e in quinta, con due docenti in aula.
+
+</div>
+<div>
+
 ###### Settimana corta
 Lezioni dal lunedì al venerdì, dalle 8:00 alle 13:30 e dalle 8:00 alle 14:20.
 
@@ -42,12 +47,6 @@ Lezioni dal lunedì al venerdì, dalle 8:00 alle 13:30 e dalle 8:00 alle 14:20.
 
 ###### Classi 100% digitali
 Niente zaino pieno di libri, quaderni e diari: a scuola vieni solo con il tuo tablet.
-
-</div>
-<div>
-
-###### Zero contributi
-Nessun contributo richiesto alle famiglie.
 
 </div>
 </div>
@@ -88,7 +87,7 @@ Studierai chimica applicata, analitica e organica e tecnologie chimiche, con un�
 <div>
 
 ###### Cosa farai
-Svolgerai analisi ed esperimenti con strumentazione professionale, studiando le proprietà dei materiali e i processi chimici. Il PCTO ti porterà in aziende farmaceutiche e laboratori di analisi.
+Svolgerai analisi ed esperimenti con strumentazione professionale, studiando le proprietà dei materiali e i processi chimici. La FSL ti porterà in aziende farmaceutiche e laboratori di analisi.
 
 </div>
 <div>
@@ -118,7 +117,7 @@ Potrai proseguire all’università in chimica, biotecnologie, scienze dei mater
 | Tecnologie dell'informazione e della comunicazione | 2 | – |
 | Tecnologie e tecniche di rappresentazione grafica | 2 | 2 |
 | Chimica applicata | 3 | 5 |
-| Totale area di indirizzo | 13 | 14 |
+| Totale area di indirizzo | 13 <span class="lab">(5)</span> | 14 <span class="lab">(5)</span> |
 
 </div>
 <div>
@@ -130,7 +129,7 @@ Potrai proseguire all’università in chimica, biotecnologie, scienze dei mater
 | Tecnologie chimiche | 4 | 5 | 6 |
 | Chimica analitica | 6 | 6 | 7 |
 | Chimica organica | 7 | 6 | 3 |
-| Totale area di indirizzo | 17 | 17 | 16 |
+| Totale area di indirizzo | 17 <span class="lab">(8)</span> | 17 <span class="lab">(9)</span> | 16 <span class="lab">(9)</span> |
 
 </div>
 </div>
@@ -186,7 +185,7 @@ Potrai continuare in ingegneria, architettura, design, scienze agrarie o geologi
 | Tecnologie e tecniche di rappresentazione grafica | – | 3 |
 | Fondamenti di progettazione edilizia e ambiente | 4 | – |
 | Fisica applicata alle strutture e all'ambiente | – | 4 |
-| Totale area di indirizzo | 13 | 14 |
+| Totale area di indirizzo | 13 <span class="lab">(5)</span> | 14 <span class="lab">(5)</span> |
 
 </div>
 <div>
@@ -199,7 +198,7 @@ Potrai continuare in ingegneria, architettura, design, scienze agrarie o geologi
 | Salvaguardia, valorizzazione e valutazione dei beni e del territorio | 3 | 4 | 4 |
 | Rilievo e geomatica | 5 | 4 | 4 |
 | Gestione del cantiere e sicurezza sul lavoro | 2 | 2 | 2 |
-| Totale area di indirizzo | 17 | 17 | 16 |
+| Totale area di indirizzo | 17 <span class="lab">(8)</span> | 17 <span class="lab">(9)</span> | 16 <span class="lab">(9)</span> |
 
 </div>
 </div>
@@ -224,7 +223,7 @@ Studierai elettronica digitale e analogica, microcontrollori, sistemi automatici
 <div>
 
 ###### Cosa farai
-Costruirai robot e piloterai con i microcontrollori bracci meccanici e reti di sensori intelligenti. Le tue competenze saranno messe alla prova durante il PCTO in aziende innovative.
+Costruirai robot e piloterai con i microcontrollori bracci meccanici e reti di sensori intelligenti. Le tue competenze saranno messe alla prova durante la FSL in aziende innovative.
 
 </div>
 <div>
@@ -254,7 +253,7 @@ Potrai proseguire all’università in ingegneria elettronica o meccatronica. In
 | Tecnologie dell'informazione e della comunicazione | 3 | – |
 | Tecnologie e tecniche di rappresentazione grafica | – | 3 |
 | Fondamenti di elettrotecnica ed elettronica | 4 | 4 |
-| Totale area di indirizzo | 13 | 14 |
+| Totale area di indirizzo | 13 <span class="lab">(5)</span> | 14 <span class="lab">(5)</span> |
 
 </div>
 <div>
@@ -267,7 +266,7 @@ Potrai proseguire all’università in ingegneria elettronica o meccatronica. In
 | Sistemi automatici | 4 | 4 | 4 |
 | Tecnologie e progettazione | 6 | 6 | 6 |
 | Complementi di matematica | 1 | 1 | – |
-| Totale area di indirizzo | 17 | 17 | 16 |
+| Totale area di indirizzo | 17 <span class="lab">(8)</span> | 17 <span class="lab">(9)</span> | 16 <span class="lab">(9)</span> |
 
 </div>
 </div>
@@ -292,7 +291,7 @@ Imparerai a progettare impianti elettrici civili e industriali e a gestire siste
 <div>
 
 ###### Cosa farai
-Realizzerai impianti elettrici civili e industriali, lavorando anche con sistemi a energie rinnovabili e domotica. Durante il PCTO collaborerai con aziende del settore elettrico ed energetico.
+Realizzerai impianti elettrici civili e industriali, lavorando anche con sistemi a energie rinnovabili e domotica. Durante la FSL collaborerai con aziende del settore elettrico ed energetico.
 
 </div>
 <div>
@@ -322,7 +321,7 @@ Potrai continuare all’università in ingegneria elettrica o energetica. Altrim
 | Tecnologie dell'informazione e della comunicazione | 3 | – |
 | Tecnologie e tecniche di rappresentazione grafica | – | 3 |
 | Fondamenti di elettrotecnica ed elettronica | 4 | 4 |
-| Totale area di indirizzo | 13 | 14 |
+| Totale area di indirizzo | 13 <span class="lab">(5)</span> | 14 <span class="lab">(5)</span> |
 
 </div>
 <div>
@@ -335,7 +334,7 @@ Potrai continuare all’università in ingegneria elettrica o energetica. Altrim
 | Sistemi automatici | 4 | 4 | 4 |
 | Tecnologie e progettazione | 6 | 6 | 6 |
 | Complementi di matematica | 1 | 1 | – |
-| Totale area di indirizzo | 17 | 17 | 16 |
+| Totale area di indirizzo | 17 <span class="lab">(8)</span> | 17 <span class="lab">(9)</span> | 16 <span class="lab">(9)</span> |
 
 </div>
 </div>
@@ -360,7 +359,7 @@ Studierai linguaggi di programmazione, sviluppo web, cybersecurity, reti e telec
 <div>
 
 ###### Cosa farai
-Nei laboratori svilupperai app e siti web, analizzerai dati e costruirai agenti AI. Durante il PCTO lavorerai su progetti reali con aziende leader.
+Nei laboratori svilupperai app e siti web, analizzerai dati e costruirai agenti AI. Durante la FSL lavorerai su progetti reali con aziende leader.
 
 </div>
 <div>
@@ -389,7 +388,7 @@ Potrai continuare in ingegneria informatica, informatica o data science, oppure 
 | Scienze sperimentali | 6 | 7 |
 | Tecnologie e tecniche di rappresentazione grafica | 3 | 3 |
 | Informatica e reti di comunicazione | 4 | 4 |
-| Totale area di indirizzo | 13 | 14 |
+| Totale area di indirizzo | 13 <span class="lab">(5)</span> | 14 <span class="lab">(5)</span> |
 
 </div>
 <div>
@@ -404,7 +403,7 @@ Potrai continuare in ingegneria informatica, informatica o data science, oppure 
 | Telecomunicazioni | 3 | 3 | – |
 | Gestione di progetto e organizzazione impresa | – | – | 2 |
 | Complementi di matematica | 1 | 1 | – |
-| Totale area di indirizzo | 17 | 17 | 16 |
+| Totale area di indirizzo | 17 <span class="lab">(8)</span> | 17 <span class="lab">(9)</span> | 16 <span class="lab">(9)</span> |
 
 </div>
 </div>
@@ -429,7 +428,7 @@ corso Cavour 249
 70121 Bari
 
 </div>
-<div class="mappa"></div>
+<img class="mappa" src="assets/mappa-sedi.png" alt="Mappa delle sedi Panetti e Pitagora">
 </div>
 
 ---

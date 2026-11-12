@@ -12,8 +12,8 @@
 
   // ---------- impostazioni ----------
   const LOGO = 'assets/logo.svg';
-  const RITMO_FORTE = 4500;   // ms tra un'animazione e l'altra su cover, section, closing
-  const RITMO_LEGGERO = 9000; // ms sulle altre slide (meno frequente)
+  const RITMO_FORTE = 3600;   // ms tra un'animazione e l'altra su cover, section, closing
+  const RITMO_LEGGERO = 7000; // ms sulle altre slide (meno frequente)
   const SEME = 2026;          // cambia questo numero per avere composizioni diverse
 
   const C = {
@@ -165,16 +165,24 @@
       case 'circle': return [[{ transform: 'none' }, { transform: 'scale(.6)' }, { transform: 'none' }], 1800];
       case 'dot': return [[{ transform: 'none' }, { transform: 'scale(2.3)' }, { transform: 'none' }], 1800];
       case 'qtl': case 'qtr': case 'qbl': case 'qbr':
-        t.shapeEl.style.transformOrigin = '50% 50%'; // giro completo intorno al centro della tessera
-        return [[{ transform: 'none' }, { transform: 'rotate(360deg)' }], 2400, () => { t.shapeEl.style.transformOrigin = ORIGINE[t.shape]; }];
-      case 'semi': return [[{ transform: 'none' }, { transform: 'translateY(75%)' }, { transform: 'none' }], 2000];
+        // perno nell'angolo: a ventaglio (si chiude ruotando fuori dalla tessera e riapre) oppure il raggio si accorcia
+        return Math.random() < 0.5
+          ? [[{ transform: 'none' }, { transform: 'rotate(90deg)' }, { transform: 'none' }], 2200]
+          : [[{ transform: 'none' }, { transform: 'scale(.45)' }, { transform: 'none' }], 2000];
+      case 'semi':
+        // perno al centro della base: tergicristallo (mezzo giro e ritorno) oppure si abbassa nel bordo
+        return Math.random() < 0.5
+          ? [[{ transform: 'none' }, { transform: 'rotate(180deg)' }, { transform: 'none' }], 2400]
+          : [[{ transform: 'none' }, { transform: 'scale(.4)' }, { transform: 'none' }], 1900];
       case 'rhomb': return [[{ transform: 'none' }, { transform: 'rotate(90deg)' }], 1600]; // ruotato di 90° è identico
       default: return [[{ transform: 'none' }, { transform: 'scale(.4)' }, { transform: 'none' }], 1900]; // triangoli
     }
   }
   function vicine(a, b) { return Math.abs(a.col - b.col) <= 1 && Math.abs(a.row - b.row) <= 1; }
   function ciclo(m) {
-    const libere = m.tiles.filter((t) => !t.logo && !t.busy);
+    // mai la stessa tessera due volte di seguito
+    const prima = m.ultime || [];
+    const libere = m.tiles.filter((t) => !t.logo && !t.busy && !prima.includes(t));
     const r = Math.random;
     const n = libere.length > 3 && r() < 0.5 ? 2 : 1;
     const scelte = [];
@@ -182,6 +190,7 @@
       const t = libere[Math.floor(r() * libere.length)];
       if (!scelte.some((s) => s === t || vicine(s, t))) scelte.push(t);
     }
+    m.ultime = scelte;
     scelte.forEach((t, i) => {
       const [kf, dur, after] = micro(t);
       t.busy = true;
@@ -194,6 +203,7 @@
   }
   function stop(m) {
     clearTimeout(m.timer);
+    m.ultime = [];
     m.anims.forEach((a) => a.cancel());
     m.anims = [];
     m.tiles.forEach((t) => { t.busy = false; if (t.shapeEl && t.shape) t.shapeEl.style.transformOrigin = ORIGINE[t.shape]; });

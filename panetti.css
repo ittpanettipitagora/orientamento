@@ -139,17 +139,15 @@ section.sedi .sedi-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 
 section.sedi .sedi-grid h6 { margin-top: 18px; }
 section.sedi .sedi-grid h6:first-child { margin-top: 0; }
 section.sedi .sedi-grid p { font-size: 26px; font-weight: 500; }
-section.sedi .mappa { position: relative; z-index: 2; height: 440px; background: #DCDED3; overflow: hidden; }
-.mappa .leaflet-container, .mappa.leaflet-container { background: #DCDED3; font-family: 'Barlow Semi Condensed', sans-serif; }
-.mappa .leaflet-tile-pane { filter: saturate(.2) sepia(.15) hue-rotate(185deg); }
-.mappa .leaflet-control-attribution { font-size: 11px; background: rgba(236,237,230,.85); color: var(--blu); }
-.mappa .leaflet-control-attribution a { color: var(--blu); }
-.pp-pin { overflow: visible; }
-.pp-pin svg { display: block; }
-.pp-pin .pp-lbl { position: absolute; left: 52px; top: 0; white-space: nowrap; background: var(--blu); color: #fff; padding: 5px 10px 4px; font-size: 15px; line-height: 1.2; }
-.pp-pin .pp-lbl b { display: block; font-weight: 700; letter-spacing: .12em; font-size: 13px; }
+section.sedi .mappa { position: relative; z-index: 2; width: 100%; height: 440px; object-fit: cover; display: block; }
 
 /* elenco indirizzi con quadratino colorato: <div class="ind-list"> */
 .ind-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
 .ind-list > div { display: flex; align-items: center; gap: 16px; font-size: 32px; font-weight: 600; line-height: 1.15; }
 .ind-list span { width: 22px; height: 22px; flex: none; }
+
+/* ore di laboratorio fra parentesi nei totali */
+td .lab { font-weight: 500; position: absolute; left: calc(50% + .8em); }
+td:not(:first-child) { position: relative; }
+th:not(:first-child), td:not(:first-child) { width: 84px; }
+section.quadro .tabelle::after { content: "Fra parentesi le ore di laboratorio."; grid-column: 1 / -1; font-size: 17px; opacity: .85; margin-top: -24px; }
