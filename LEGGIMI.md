@@ -6,6 +6,7 @@ Tema Marp con lo stile di locandina e brochure, più il mosaico animato.
 
 - `panetti.css`: il tema (colori, Barlow Semi Condensed, fascia gialla, tabelle, layout)
 - `mosaico.js`: disegna e anima il mosaico su ogni slide
+- `mappa.js`: la mappa con le due sedi (slide «Dove siamo»)
 - `assets/`: logo, QR «Prenota» (campagna Matomo `qr-slide`), QR WhatsApp
 - `esempio.md`: presentazione di esempio con tutti i layout e i cinque indirizzi (scheda + quadro orario)
 - `esempio.html`: l'esempio già compilato, da aprire nel browser
@@ -23,8 +24,8 @@ In VS Code (estensione Marp): aggiungi `panetti.css` in `markdown.marp.themes` e
 
 ## Pubblicare sul sito
 
-Carica nella stessa cartella: il file `.html`, `mosaico.js` e la cartella `assets/`.
-Il carattere arriva da Google Fonts, quindi serve la connessione.
+Carica nella stessa cartella: il file `.html`, `mosaico.js`, `mappa.js` e la cartella `assets/`.
+Carattere (Google Fonts), libreria della mappa (Leaflet da cdnjs) e sfondo della mappa (OpenStreetMap/CARTO) arrivano da internet: serve la connessione.
 
 ## Scrivere le slide
 
@@ -39,7 +40,12 @@ footer: panettipitagora.edu.it/orientamento
 ---
 ```
 
-Nella **prima slide**: `<script src="mosaico.js"></script>` (una volta sola).
+Nella **prima slide**, una volta sola:
+
+```
+<script src="mosaico.js"></script>
+<script src="mappa.js"></script>
+```
 
 | Layout | Come si attiva | Mosaico |
 |---|---|---|
@@ -47,6 +53,7 @@ Nella **prima slide**: `<script src="mosaico.js"></script>` (una volta sola).
 | Sezione | `<!-- _class: section -->` | fascia di tessere a destra |
 | Indirizzo | `<!-- _class: indirizzo inf -->` (o `chi` `cat` `eln` `elt`) | 2 tessere in alto a destra, nel colore dell'indirizzo |
 | Quadro orario | `<!-- _class: quadro inf -->` | come indirizzo; tabelle affiancate in `<div class="tabelle">` |
+| Dove siamo | `<!-- _class: sedi -->`, con `<div class="mappa"></div>` | 2 tessere in alto a destra; mappa fissa con le due sedi |
 | Date e QR | `<!-- _class: date -->` | 2 tessere in alto a destra |
 | Chiusura | `<!-- _class: closing -->` | mosaico a tutta pagina con il logo (il testo non si vede) |
 | Tutte le altre | nessuna classe | 2 tessere in alto a destra |
@@ -58,6 +65,7 @@ Elementi di testo:
 - `<div class="cols"> … </div>` → tre colonne con filetto (ogni colonna in un `<div>`, con una riga vuota dentro)
 - `<em>Realizza.</em>` nel titolo della copertina → evidenziato in giallo
 - `<mark>parola</mark>` → evidenziazione gialla ovunque
+- `<div class="ind-list">` → elenco degli indirizzi uno sotto l’altro con il quadratino colorato (vedi esempio.md)
 
 ## Animazioni
 

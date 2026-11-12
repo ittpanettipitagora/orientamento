@@ -9,6 +9,7 @@ title: Orientamento 2026/27 · Liceo Tecnologico Panetti Pitagora
 <!-- _class: cover -->
 <!-- _paginate: false -->
 <script src="mosaico.js"></script>
+<script src="mappa.js"></script>
 
 # Entra. Scopri. <em>Realizza.</em>
 
@@ -59,7 +60,13 @@ Nessun contributo richiesto alle famiglie.
 
 # I nostri indirizzi
 
-Chimica e materiali · Costruzioni, ambiente e territorio · Elettronica · Elettrotecnica · Informatica
+<div class="ind-list">
+<div><span style="background:var(--chi)"></span>Chimica e materiali</div>
+<div><span style="background:var(--cat)"></span>Costruzioni, ambiente e territorio</div>
+<div><span style="background:var(--eln)"></span>Elettronica</div>
+<div><span style="background:var(--elt)"></span>Elettrotecnica</div>
+<div><span style="background:var(--inf)"></span>Informatica</div>
+</div>
 
 ---
 
@@ -400,6 +407,29 @@ Potrai continuare in ingegneria informatica, informatica o data science, oppure 
 | Totale area di indirizzo | 17 | 17 | 16 |
 
 </div>
+</div>
+
+---
+
+<!-- _class: sedi -->
+
+##### Orientamento 2026/27
+
+## Dove siamo
+
+<div class="sedi-grid">
+<div>
+
+###### Sede Panetti
+via Re David 186
+70123 Bari
+
+###### Sede Pitagora
+corso Cavour 249
+70121 Bari
+
+</div>
+<div class="mappa"></div>
 </div>
 
 ---
