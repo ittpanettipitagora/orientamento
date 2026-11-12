@@ -6,7 +6,7 @@ Tema Marp con lo stile di locandina e brochure, più il mosaico animato.
 
 - `panetti.css`: il tema (colori, Barlow Semi Condensed, fascia gialla, tabelle, layout)
 - `mosaico.js`: disegna e anima il mosaico su ogni slide
-- `assets/`: logo, QR «Prenota» (campagna Matomo `qr-slide`), QR WhatsApp, mappa delle sedi (`mappa-sedi.png` per le slide, `mappa-sedi-stampa.pdf` vettoriale per la stampa)
+- `assets/`: logo, QR «Prenota» (campagna Matomo `qr-slide`), QR WhatsApp, icone dei cinque indirizzi (`icone/`), mappa delle sedi (`mappa-sedi.png` per le slide, `mappa-sedi-stampa.pdf` vettoriale per la stampa)
 - `index.md`: presentazione con tutti i layout e i cinque indirizzi (scheda + quadro orario)
 - `index.html`: la presentazione già compilata, da aprire nel browser
 
@@ -49,8 +49,8 @@ Nella **prima slide**, una volta sola:
 |---|---|---|
 | Copertina | `<!-- _class: cover -->` | 3 colonne a destra con il logo |
 | Sezione | `<!-- _class: section -->` | fascia di tessere a destra |
-| Indirizzo | `<!-- _class: indirizzo inf -->` (o `chi` `cat` `eln` `elt`) | 2 tessere in alto a destra, nel colore dell'indirizzo |
-| Quadro orario | `<!-- _class: quadro inf -->` | come indirizzo; tabelle affiancate in `<div class="tabelle">` |
+| Indirizzo | `<!-- _class: indirizzo inf -->` (o `chi` `cat` `eln` `elt`) | in alto a destra l'icona dell'indirizzo più una tessera animata |
+| Quadro orario | `<!-- _class: quadro inf -->` | come indirizzo (icona + tessera); tabelle affiancate in `<div class="tabelle">` |
 | Dove siamo | `<!-- _class: sedi -->`, con `<img class="mappa" src="assets/mappa-sedi.png">` | 2 tessere in alto a destra; mappa delle due sedi |
 | Date e QR | `<!-- _class: date -->` | 2 tessere in alto a destra |
 | Chiusura | `<!-- _class: closing -->` | mosaico a tutta pagina con il logo (il testo non si vede) |
@@ -63,7 +63,7 @@ Elementi di testo:
 - `<div class="cols"> … </div>` → tre colonne con filetto (ogni colonna in un `<div>`, con una riga vuota dentro)
 - `<em>Realizza.</em>` nel titolo della copertina → evidenziato in giallo
 - `<mark>parola</mark>` → evidenziazione gialla ovunque
-- `<div class="ind-list">` → elenco degli indirizzi uno sotto l’altro con il quadratino colorato (vedi index.md)
+- `<div class="ind-list">` → elenco degli indirizzi uno sotto l’altro con la loro icona (vedi index.md)
 
 ## Animazioni
 

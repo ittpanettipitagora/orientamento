@@ -142,9 +142,10 @@ section.sedi .sedi-grid p { font-size: 26px; font-weight: 500; }
 section.sedi .mappa { position: relative; z-index: 2; width: 100%; height: 440px; object-fit: cover; display: block; }
 
 /* elenco indirizzi con quadratino colorato: <div class="ind-list"> */
-.ind-list { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.ind-list { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
 .ind-list > div { display: flex; align-items: center; gap: 16px; font-size: 32px; font-weight: 600; line-height: 1.15; }
 .ind-list span { width: 22px; height: 22px; flex: none; }
+.ind-list img { width: 52px; height: 52px; flex: none; display: block; }
 
 /* ore di laboratorio fra parentesi nei totali */
 td .lab { font-weight: 500; position: absolute; left: calc(50% + .8em); }

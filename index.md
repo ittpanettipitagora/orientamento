@@ -60,11 +60,11 @@ Niente zaino pieno di libri, quaderni e diari: a scuola vieni solo con il tuo ta
 # I nostri indirizzi
 
 <div class="ind-list">
-<div><span style="background:var(--chi)"></span>Chimica e materiali</div>
-<div><span style="background:var(--cat)"></span>Costruzioni, ambiente e territorio</div>
-<div><span style="background:var(--eln)"></span>Elettronica</div>
-<div><span style="background:var(--elt)"></span>Elettrotecnica</div>
-<div><span style="background:var(--inf)"></span>Informatica</div>
+<div><img src="assets/icone/chimica.svg" alt="">Chimica e materiali</div>
+<div><img src="assets/icone/costruzioni.svg" alt="">Costruzioni, ambiente e territorio</div>
+<div><img src="assets/icone/elettronica.svg" alt="">Elettronica</div>
+<div><img src="assets/icone/elettrotecnica.svg" alt="">Elettrotecnica</div>
+<div><img src="assets/icone/informatica.svg" alt="">Informatica</div>
 </div>
 
 ---

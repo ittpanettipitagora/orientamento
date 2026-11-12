@@ -40,6 +40,15 @@
     return { x: 1040, y: 0, size: 120, cols: 2, rows: 1, ritmo: RITMO_LEGGERO, angolo: true };
   }
   const ACCENTI = ['chi', 'cat', 'eln', 'elt', 'inf'];
+  // icone degli indirizzi (disegnate su 200 × 200)
+  const ICONE = {
+    chi: '<rect x="84" y="34" width="32" height="56" fill="#25377E"/><path d="M84 88 L40 166 H160 L116 88Z" fill="#25377E"/><path d="M58 134 H142 L160 166 H40Z" fill="#EAE463"/><circle cx="100" cy="22" r="10" fill="#ECEDE6"/>',
+    cat: '<path d="M30 96 L100 36 L170 96Z" fill="#25377E"/><rect x="46" y="96" width="108" height="72" fill="#25377E"/><rect x="86" y="118" width="28" height="50" fill="#EAE463"/>',
+    eln: '<rect x="68" y="34" width="10" height="20" fill="#ECEDE6"/><rect x="68" y="146" width="10" height="20" fill="#ECEDE6"/><rect x="34" y="68" width="20" height="10" fill="#ECEDE6"/><rect x="146" y="68" width="20" height="10" fill="#ECEDE6"/><rect x="95" y="34" width="10" height="20" fill="#ECEDE6"/><rect x="95" y="146" width="10" height="20" fill="#ECEDE6"/><rect x="34" y="95" width="20" height="10" fill="#ECEDE6"/><rect x="146" y="95" width="20" height="10" fill="#ECEDE6"/><rect x="122" y="34" width="10" height="20" fill="#ECEDE6"/><rect x="122" y="146" width="10" height="20" fill="#ECEDE6"/><rect x="34" y="122" width="20" height="10" fill="#ECEDE6"/><rect x="146" y="122" width="20" height="10" fill="#ECEDE6"/><rect x="54" y="54" width="92" height="92" fill="#25377E"/><circle cx="100" cy="100" r="20" fill="#EAE463"/>',
+    elt: '<path d="M116 24 L54 112 H96 L80 176 L148 82 H104Z" fill="#EAE463"/>',
+    inf: '<path d="M72 56 L28 100 L72 144" fill="none" stroke="#25377E" stroke-width="18"/><path d="M128 56 L172 100 L128 144" fill="none" stroke="#25377E" stroke-width="18"/><path d="M112 44 L88 156" stroke="#EAE463" stroke-width="16"/>',
+  };
+
 
   function composizione(lay, cls, seed) {
     const r = rng(seed);
@@ -54,9 +63,16 @@
         const left = map[(col - 1) + ',' + row], up = map[col + ',' + (row - 1)];
         let bg, n = 0;
         do { bg = pick(r, FONDI); n++; } while (n < 50 && (bg === left || bg === up));
-        if (lay.angolo && acc && col === 0) bg = acc; // slide indirizzo: prima tessera nel colore dell'indirizzo
+        if (lay.angolo && acc && col === 0) { // slide indirizzo: prima tessera = icona dell'indirizzo
+          map[col + ',' + row] = acc;
+          grid.push({ col, row, bg: acc, icona: acc });
+          continue;
+        }
         let fg; do { fg = pick(r, ['blu', 'giallo', 'carta', ...ACCENTI]); } while (fg === bg || (bg === 'carta' && fg === 'giallo'));
-        if (lay.angolo && acc && col === 1) { if (bg === acc) bg = 'blu'; fg = acc; }
+        if (lay.angolo && acc && col === 1) { // accanto all'icona: niente colore dell'indirizzo
+          if (bg === acc) bg = 'blu';
+          if (fg === acc) fg = bg === 'blu' ? 'giallo' : 'blu';
+        }
         map[col + ',' + row] = bg;
         grid.push({ col, row, bg, fg, shape: pick(r, FORME) });
       }
@@ -114,7 +130,12 @@
       el('rect', { x: 0, y: 0, width: w, height: h }, el('clipPath', { id }, defs));
       const clip = el('g', { 'clip-path': `url(#${id})` }, g);
       t.bgEl = el('rect', { x: 0, y: 0, width: w, height: h, fill: t.logo ? C.bianco : C[t.bg] }, clip);
-      if (t.logo) {
+      if (t.icona) {
+        t.shapeEl = el('g', {}, clip);
+        t.shapeEl.innerHTML = `<g transform="scale(${s / 200})">${ICONE[t.icona]}</g>`;
+        t.shapeEl.style.transformBox = 'fill-box';
+        t.shapeEl.style.transformOrigin = '50% 50%';
+      } else if (t.logo) {
         const lw = w * lay.logoScala, lh = lw * 443.04 / 766.08;
         t.shapeEl = el('image', { href: LOGO, x: (w - lw) / 2, y: (h - lh) / 2, width: lw, height: lh }, clip);
       } else {
@@ -141,7 +162,7 @@
       const vert = lato.startsWith('50%');
       const from = vert ? 'scaleY(0)' : 'scaleX(0)';
       m.anims.push(t.bgEl.animate([{ transform: from }, { transform: 'none' }], { duration: 420, delay, easing: EASE, fill: 'backwards' }));
-      if (t.logo) {
+      if (t.logo || t.icona) {
         m.anims.push(t.shapeEl.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, delay: delay + 300, easing: 'ease-out', fill: 'backwards' }));
         continue;
       }
@@ -182,7 +203,7 @@
   function ciclo(m) {
     // mai la stessa tessera due volte di seguito
     const prima = m.ultime || [];
-    const libere = m.tiles.filter((t) => !t.logo && !t.busy && !prima.includes(t));
+    const libere = m.tiles.filter((t) => !t.logo && !t.icona && !t.busy && !prima.includes(t));
     const r = Math.random;
     const n = libere.length > 3 && r() < 0.5 ? 2 : 1;
     const scelte = [];
@@ -206,7 +227,7 @@
     m.ultime = [];
     m.anims.forEach((a) => a.cancel());
     m.anims = [];
-    m.tiles.forEach((t) => { t.busy = false; if (t.shapeEl && t.shape) t.shapeEl.style.transformOrigin = ORIGINE[t.shape]; });
+    m.tiles.forEach((t) => { t.busy = false; if (t.shapeEl && t.shape && !t.icona) t.shapeEl.style.transformOrigin = ORIGINE[t.shape]; });
   }
 
   // ---------- avvio ----------
