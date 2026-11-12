@@ -9,14 +9,14 @@ Tema Marp con lo stile di locandina e brochure, più il mosaico animato.
 - `mappa.js`: la mappa con le due sedi (slide «Dove siamo»)
 - `assets/`: logo, QR «Prenota» (campagna Matomo `qr-slide`), QR WhatsApp
 - `esempio.md`: presentazione di esempio con tutti i layout e i cinque indirizzi (scheda + quadro orario)
-- `esempio.html`: l'esempio già compilato, da aprire nel browser
+- `index.html`: la presentazione compilata, da aprire nel browser
 
 ## Compilare
 
 Da terminale, nella cartella del kit:
 
 ```
-npx @marp-team/marp-cli --html --theme panetti.css esempio.md -o esempio.html
+npx @marp-team/marp-cli --html --theme panetti.css esempio.md -o index.html
 ```
 
 `--html` è obbligatorio, altrimenti lo script del mosaico non parte.
