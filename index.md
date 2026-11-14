@@ -22,7 +22,7 @@ Insieme dal primo giorno, progettiamo il tuo futuro.
 
 # Dal primo giorno, nel tuo indirizzo.
 
-Scegli subito l’indirizzo che ti appassiona e inizi a studiarne le materie già in prima.
+Scegli subito l’indirizzo che ti appassiona e inizi a studiarne le materie già dal primo anno.
 
 ---
 
@@ -34,7 +34,7 @@ Scegli subito l’indirizzo che ti appassiona e inizi a studiarne le materie gi�
 <div>
 
 ###### Laboratori obbligatori
-Il laboratorio fa parte dell’orario di tutti: da 5 ore a settimana in prima fino a 9 in quarta e in quinta, con due docenti in aula.
+Il laboratorio fa parte dell’orario di tutti: da 5 ore a settimana al primo anno fino a 9 al quarto e al quinto anno, con due docenti in aula.
 
 </div>
 <div>
@@ -61,7 +61,7 @@ Niente zaino pieno di libri, quaderni e diari: a scuola vieni solo con il tuo ta
 
 <div class="ind-list">
 <div><img src="assets/icone/chimica.svg" alt="">Chimica e materiali</div>
-<div><img src="assets/icone/costruzioni.svg" alt="">Costruzioni, ambiente e territorio</div>
+<div><img src="assets/icone/costruzioni.svg" alt="">Costruzioni, Ambiente e Territorio</div>
 <div><img src="assets/icone/elettronica.svg" alt="">Elettronica</div>
 <div><img src="assets/icone/elettrotecnica.svg" alt="">Elettrotecnica</div>
 <div><img src="assets/icone/informatica.svg" alt="">Informatica</div>
@@ -140,7 +140,7 @@ Potrai proseguire all’università in chimica, biotecnologie, scienze dei mater
 
 ##### Liceo tecnologico per le costruzioni, l’ambiente e il territorio
 
-# Costruzioni, ambiente e territorio
+# Costruzioni, Ambiente e Territorio
 
 L’indirizzo che ti apre le porte al mondo della progettazione architettonica, delle tecniche costruttive, del rilievo e della valutazione dei beni e del territorio. Imparerai a progettare e rilevare edifici e infrastrutture con un’attenzione costante alla sostenibilità ambientale e alla sicurezza, per diventare un professionista operativo nell’edilizia e nelle costruzioni.
 
@@ -160,7 +160,7 @@ Userai software CAD e BIM e strumenti di fotogrammetria 3D per costruire modelli
 <div>
 
 ###### Dopo il diploma
-Potrai continuare in ingegneria, architettura, design, scienze agrarie o geologiche, oppure lavorare subito come geometra in studi, imprese o enti pubblici.
+Potrai continuare in architettura, ingegneria, design, scienze agrarie o geologiche oppure lavorare subito come geometra in studi tecnici, imprese o enti pubblici. Con il corso di laurea professionalizzante in Costruzioni e Gestione Ambientale e Territoriale o con 18 mesi di tirocinio potrai inoltre abilitarti alla libera professione di Geometra.
 
 </div>
 </div>
@@ -169,7 +169,7 @@ Potrai continuare in ingegneria, architettura, design, scienze agrarie o geologi
 
 <!-- _class: quadro cat -->
 
-##### Costruzioni, ambiente e territorio · quadro orario
+##### Costruzioni, Ambiente e Territorio · quadro orario
 
 ## Area di indirizzo
 
