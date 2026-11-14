@@ -160,7 +160,7 @@ Userai software CAD e BIM e strumenti di fotogrammetria 3D per costruire modelli
 <div>
 
 ###### Dopo il diploma
-Potrai continuare in architettura, ingegneria, design, scienze agrarie o geologiche oppure lavorare subito come geometra in studi tecnici, imprese o enti pubblici. Con il corso di laurea professionalizzante in Costruzioni e Gestione Ambientale e Territoriale o con 18 mesi di tirocinio potrai inoltre abilitarti alla libera professione di Geometra.
+Potrai continuare in architettura, ingegneria o design, oppure lavorare subito come geometra. Con la laurea professionalizzante o 18 mesi di tirocinio potrai abilitarti alla libera professione di Geometra.
 
 </div>
 </div>
