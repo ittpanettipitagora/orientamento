@@ -34,7 +34,7 @@ Scegli subito l’indirizzo che ti appassiona e inizi a studiarne le materie gi�
 <div>
 
 ###### Laboratori obbligatori
-Il laboratorio fa parte dell’orario di tutti: da 5 ore a settimana al primo anno fino a 9 al quarto e al quinto anno, con due docenti in aula.
+Il laboratorio fa parte dell’orario di tutte le classi e indirizzi: da 5 ore a settimana al primo anno fino a 9 al quarto e al quinto anno, con due docenti in aula.
 
 </div>
 <div>
@@ -46,7 +46,7 @@ Lezioni dal lunedì al venerdì, dalle 8:00 alle 13:30 e dalle 8:00 alle 14:20.
 <div>
 
 ###### Classi 100% digitali
-Niente zaino pieno di libri, quaderni e diari: a scuola vieni solo con il tuo tablet.
+Niente zaino pieno di libri, quaderni e diari: a scuola vieni solo con il tuo dispositivo digitale.
 
 </div>
 </div>
@@ -87,7 +87,7 @@ Studierai chimica applicata, analitica e organica e tecnologie chimiche, con un�
 <div>
 
 ###### Cosa farai
-Svolgerai analisi ed esperimenti con strumentazione professionale, studiando le proprietà dei materiali e i processi chimici. La FSL ti porterà in aziende farmaceutiche e laboratori di analisi.
+Svolgerai analisi ed esperimenti con strumentazione professionale, studiando le proprietà dei materiali e i processi chimici. La formazione scuola-lavoro (FSL) ti porterà in aziende farmaceutiche e laboratori di analisi.
 
 </div>
 <div>
@@ -211,7 +211,7 @@ Potrai continuare in architettura, ingegneria o design, oppure lavorare subito c
 
 # Elettronica
 
-L’indirizzo che ti avvicina alla progettazione e allo sviluppo di circuiti e sistemi elettronici, perfetto per chi ama la tecnologia e l’innovazione. Dai primi esperimenti con i componenti fino ai sistemi automatici, impari a capire come funzionano gli oggetti che usi ogni giorno e a costruirne di nuovi.
+L’indirizzo che ti avvicina alla progettazione e allo sviluppo di circuiti, componenti e sistemi elettronici, perfetto per chi ama la tecnologia e l’innovazione. Dai primi esperimenti con i componenti fino ai sistemi automatici; impari a capire come funzionano gli oggetti che usi ogni giorno e a costruirne di nuovi.
 
 <div class="cols">
 <div>
@@ -223,7 +223,7 @@ Studierai elettronica digitale e analogica, microcontrollori, sistemi automatici
 <div>
 
 ###### Cosa farai
-Costruirai robot e piloterai con i microcontrollori bracci meccanici e reti di sensori intelligenti. Le tue competenze saranno messe alla prova durante la FSL in aziende innovative.
+Costruirai robot e piloterai con i microcontrollori bracci meccanici e reti di sensori intelligenti. Le tue competenze saranno messe alla prova durante la formazione scuola-lavoro (FSL) in aziende innovative.
 
 </div>
 <div>
@@ -291,7 +291,7 @@ Imparerai a progettare impianti elettrici civili e industriali e a gestire siste
 <div>
 
 ###### Cosa farai
-Realizzerai impianti elettrici civili e industriali, lavorando anche con sistemi a energie rinnovabili e domotica. Durante la FSL collaborerai con aziende del settore elettrico ed energetico.
+Realizzerai impianti elettrici civili e industriali, lavorando anche con sistemi a energie rinnovabili e domotica. Durante la formazione scuola-lavoro (FSL) collaborerai con aziende del settore elettrico ed energetico.
 
 </div>
 <div>
@@ -347,7 +347,7 @@ Potrai continuare all’università in ingegneria elettrica o energetica. Altrim
 
 # Informatica
 
-Andrai al cuore della tecnologia. Un percorso dedicato allo sviluppo di software e applicazioni, alla gestione dei sistemi e delle reti e all’intelligenza artificiale: dalla data science agli agenti AI, scoprirai come funzionano gli strumenti che stanno cambiando il mondo e imparerai a costruirli.
+Andrai al cuore della tecnologia. Un percorso dedicato allo sviluppo di software e applicazioni, alla gestione dei sistemi e delle reti e all’intelligenza artificiale: dalla data science agli agenti AI; scoprirai come funzionano gli strumenti che stanno cambiando il mondo e imparerai a costruirli.
 
 <div class="cols">
 <div>
@@ -359,7 +359,7 @@ Studierai linguaggi di programmazione, sviluppo web, cybersecurity, reti e telec
 <div>
 
 ###### Cosa farai
-Nei laboratori svilupperai app e siti web, analizzerai dati e costruirai agenti AI. Durante la FSL lavorerai su progetti reali con aziende leader.
+Nei laboratori svilupperai app e siti web, analizzerai dati e costruirai agenti AI. Durante la formazione scuola-lavoro (FSL) lavorerai su progetti reali con aziende leader.
 
 </div>
 <div>
@@ -397,11 +397,10 @@ Potrai continuare in ingegneria informatica, informatica o data science, oppure 
 
 | Materia | III | IV | V |
 |---|---|---|---|
-| Sistemi e reti | 4 | 4 | 4 |
+| Sistemi e reti | 4 | 4 | 6 |
 | Tecnologie e progettazione di sistemi informatici e di telecomunicazioni | 3 | 3 | 4 |
 | Informatica | 6 | 6 | 6 |
 | Telecomunicazioni | 3 | 3 | – |
-| Gestione di progetto e organizzazione impresa | – | – | 2 |
 | Complementi di matematica | 1 | 1 | – |
 | Totale area di indirizzo | 17 <span class="lab">(8)</span> | 17 <span class="lab">(9)</span> | 16 <span class="lab">(9)</span> |
 
