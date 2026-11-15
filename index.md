@@ -154,7 +154,7 @@ Studierai progettazione, rilievo e geomatica, salvaguardia e valutazione del ter
 <div>
 
 ###### Cosa farai
-Userai software CAD e BIM e strumenti di fotogrammetria 3D per costruire modelli digitali di edifici e infrastrutture, su progetti reali.
+Userai software CAD e BIM e strumenti di fotogrammetria 3D per costruire modelli digitali di edifici e infrastrutture.
 
 </div>
 <div>
@@ -353,13 +353,13 @@ Andrai al cuore della tecnologia. Un percorso dedicato allo sviluppo di software
 <div>
 
 ###### Cosa studierai
-Studierai linguaggi di programmazione, sviluppo web, cybersecurity, reti e telecomunicazioni, sviluppando da subito progetti concreti.
+Studierai linguaggi di programmazione, sviluppo web, cybersecurity, reti e telecomunicazioni.
 
 </div>
 <div>
 
 ###### Cosa farai
-Nei laboratori svilupperai app e siti web, analizzerai dati e costruirai agenti AI. Durante la formazione scuola-lavoro (FSL) lavorerai su progetti reali con aziende leader.
+Nei laboratori svilupperai app e siti web, analizzerai dati e costruirai agenti AI. Durante la formazione scuola-lavoro (FSL) lavorerai con aziende leader del settore.
 
 </div>
 <div>
